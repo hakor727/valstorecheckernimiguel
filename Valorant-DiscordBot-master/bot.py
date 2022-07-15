@@ -58,7 +58,7 @@ class ValorantBot(commands.Bot):
         
         # bot presence
         activity_type = discord.ActivityType.playing
-        await self.change_presence(activity=discord.Activity(type=activity_type, name="e"))
+        await self.change_presence(activity=discord.Activity(type=activity_type, name="Homophobia"))
     
     async def setup_hook(self) -> None:
         if self.session is None:
