@@ -14,10 +14,6 @@ from dotenv import load_dotenv
 from utils import locale_v2
 from utils.valorant.cache import get_cache
 
-import nextcord
-import random
-from nextcord.ext import commands
-
 
 load_dotenv()
 
@@ -27,30 +23,13 @@ initial_extensions = [
     'cogs.notify',
     'cogs.valorant'
 ]
-punching_gifs = ["https://tenor.com/bV97I.gif"]
-  punching_names = ['Pass Him Down!']
+
     
 # intents required
 intents = discord.Intents.default()
 intents.message_content = True
 
 BOT_PREFIX = '-'
-
-class ActionGifs(commands.Bot):
-
-    def __init__(self, client):
-        self.client = client
-
-    @commands.command()
-    async def pass(self, ctx: commands.Context,):
-        embed = nextcord.Embed(
-            colour=nextcord.Colour(0xCE3011),
-            description=f"{(random.choice(punching_names))}"
-
-        )
-        embed.set_image(url=(random.choice(punching_gifs)))
-
-        await ctx.send(embed=embed)
 
 class ValorantBot(commands.Bot):
     debug: bool
