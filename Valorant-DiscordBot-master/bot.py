@@ -14,8 +14,6 @@ from dotenv import load_dotenv
 from utils import locale_v2
 from utils.valorant.cache import get_cache
 
-punch_gifs = ['https://tenor.com/bV93U.gif']
-punch_names = ['Pass him down!']
 
 load_dotenv()
 
@@ -59,8 +57,8 @@ class ValorantBot(commands.Bot):
         print(f"Version: {self.bot_version}")
         
         # bot presence
-        activity_type = discord.ActivityType.listening
-        await self.change_presence(activity=discord.Activity(type=activity_type, name="Sakanegadik Slowed + Reverb"))
+        activity_type = discord.ActivityType.playing
+        await self.change_presence(activity=discord.Activity(type=activity_type, name="Homophobia"))
     
     async def setup_hook(self) -> None:
         if self.session is None:
@@ -101,18 +99,6 @@ class ValorantBot(commands.Bot):
     async def start(self, debug: bool = False) -> None:
         self.debug = debug
         return await super().start(os.getenv('TOKEN'), reconnect=True)
-    
-    
-    @bot.command()
-    async def punch(ctx)
-        embed = discord.Embed(
-            colour=discord.Colour.random())
-            description = f"{ctx.author.mention} {(random.choice(punch_names))}"
-        
-        )
-        embed.set_image(url=(random.choice(punch_gifs)))
-        
-        await ctx.send(embed = embed)
   
 
 
