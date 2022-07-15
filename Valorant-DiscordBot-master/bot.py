@@ -57,7 +57,7 @@ class ValorantBot(commands.Bot):
         
         # bot presence
         activity_type = discord.ActivityType.listening
-        await self.change_presence(activity=discord.Activity(type=activity_type, name="(╯•﹏•╰)"))
+        await self.change_presence(activity=discord.Activity(type=activity_type, name="Sakanegadik Slowed + Reverb"))
     
     async def setup_hook(self) -> None:
         if self.session is None:
