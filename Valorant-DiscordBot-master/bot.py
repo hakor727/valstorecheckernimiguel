@@ -14,6 +14,9 @@ from dotenv import load_dotenv
 from utils import locale_v2
 from utils.valorant.cache import get_cache
 
+punch_gifs = ['https://tenor.com/bV93U.gif']
+punch_names = ['Pass him down!']
+
 load_dotenv()
 
 initial_extensions = [
@@ -98,6 +101,19 @@ class ValorantBot(commands.Bot):
     async def start(self, debug: bool = False) -> None:
         self.debug = debug
         return await super().start(os.getenv('TOKEN'), reconnect=True)
+    
+    
+    @bot.command()
+    async def punch(ctx)
+        embed = discord.Embed(
+            colour=discord.Colour.random())
+            description = f"{ctx.author.mention} {(random.choice(punch_names))}"
+        
+        )
+        embed.set_image(url=(random.choice(punch_gifs)))
+        
+        await ctx.send(embed = embed)
+  
 
 
 def run_bot() -> None:
