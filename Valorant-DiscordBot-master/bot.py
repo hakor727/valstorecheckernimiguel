@@ -22,6 +22,7 @@ initial_extensions = [
     'cogs.errors',
     'cogs.notify',
     'cogs.valorant'
+    'cogs.actionsGIF'
 ]
 
     
